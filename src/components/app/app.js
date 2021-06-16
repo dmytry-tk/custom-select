@@ -9,7 +9,7 @@ const App = () => {
         <CustomSelect
             onChange={(value) => console.log("onChange", value)}
             onBlur={(value) => console.log("onBlur")}
-            // value={"color3"}
+            // value={"color2"}
             // defaultValue={"color3"}
             // disabled={true}
             onFocus={(value) => console.log("onFocus")}

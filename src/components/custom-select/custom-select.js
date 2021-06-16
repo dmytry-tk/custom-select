@@ -14,7 +14,7 @@ const CustomSelect = (props) => {
     const [showOptions, setShowOptions] = useState(false)
 
     useEffect(() => {
-        if(value) setSelectedOption(value)
+        if(value !== undefined) setSelectedOption(value)
     }, [value])
 
     const localOnChange = (obj) => {
@@ -80,8 +80,8 @@ CustomSelect.defaultProps = {
     onBlur: () => {},
     onFocus: () => {},
     options: [],
-    value: "",
-    defaultValue: "",
+    value: undefined,
+    defaultValue: undefined,
     disabled: false,
     placeholder: "Select option",
     className: "",
