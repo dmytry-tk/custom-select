@@ -36,9 +36,7 @@ const CustomSelect = (props) => {
     }
 
     const findValue = (val) => {
-        const res = options.find(({value, name}) => {
-            return value === val? name : false;
-        })
+        const res = options.find(({value}) => value === val)
         return res?.value? res.name : "";
     }
 
@@ -49,7 +47,9 @@ const CustomSelect = (props) => {
                 id={id}
                 name={name}>
                 <div className="custom-select-input">
-                    <label htmlFor={'custom-select-input'} className="select-arrow"><img src={arrow} alt=""/></label>
+                    <label htmlFor={'custom-select-input'} className="select-arrow">
+                        <img src={arrow} alt=""/>
+                    </label>
                     <input
                         id={"custom-select-input"}
                         type="text"

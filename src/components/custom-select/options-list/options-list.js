@@ -18,7 +18,7 @@ const OptionsList = ({options, onChange}) => {
                 }
             </>
         )
-    }, [options, onChange])
+    }, [options])
 
     return optionsList;
 }
